@@ -7,7 +7,7 @@ public abstract class BaseMapper<E, V> {
 
 	public List<V> convertEntity(List<E> dtos) {
 
-		return dtos.stream().map(e -> convertEntity(e)).collect(Collectors.toList());
+		return dtos.stream().map(this::convertEntity).collect(Collectors.toList());
 	}
 
 	public Optional<V> convertEntity(Optional<E> optionalDto) {
