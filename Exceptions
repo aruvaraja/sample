@@ -1,0 +1,32 @@
+package com...commons.exceptions;
+
+public class ConflictException extends RuntimeException {
+
+    private static final long serialVersionUID = -6111826772540460442L;
+
+	public ConflictException(Throwable cause) {
+		super(cause);
+	}
+
+	public ConflictException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public ConflictException(String message) {
+		super(message);
+	}
+
+	public ConflictException() {
+	}
+
+}
+
+=========================
+JsonParseException
+NotFoundException
+NotMatchedException
+BadRequestException
+ForbiddenException
+PojoNotValidException
+UnauthorizedException
+UserNotMatchedException
