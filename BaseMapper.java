@@ -40,5 +40,10 @@ public abstract class BaseMapper<E, V> {
 		}
 		return Optional.empty();
 	}
+
+	public Page<M> mapEntityPageIntoMOPage(Pageable pageRequest, Page<E> source) {
+		List<M> mos = mapEntitiesIntoMOs(source.getContent());
+		return new PageImpl<M>(mos, pageRequest, source.getTotalElements());
+	}
 	
 }
